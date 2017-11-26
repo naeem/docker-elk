@@ -27,6 +27,7 @@ services:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml
       - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - ./logstash/metadata:/usr/share/logstash/metadata
     ports:
       - "5000:5000"
     environment:

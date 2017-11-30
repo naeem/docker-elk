@@ -8,3 +8,11 @@
   path.config: "/usr/share/logstash/pipeline/fault-logstash.conf"
 - pipeline.id: oee
   path.config: "/usr/share/logstash/pipeline/oee-logstash.conf"
+- pipeline.id: good2
+  path.config: "/usr/share/logstash/pipeline/good-logstash2.conf"
+- pipeline.id: defect2
+  path.config: "/usr/share/logstash/pipeline/defect-logstash2.conf"
+- pipeline.id: fault2
+  path.config: "/usr/share/logstash/pipeline/fault-logstash2.conf"
+- pipeline.id: oee2
+  path.config: "/usr/share/logstash/pipeline/oee-logstash2.conf"

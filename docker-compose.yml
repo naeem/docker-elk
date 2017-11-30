@@ -14,7 +14,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
     networks:
       - elk
 
@@ -31,13 +31,13 @@ services:
     ports:
       - "5000:5000"
     environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      LS_JAVA_OPTS: "-Xmx512m -Xms512m"
     networks:
       - elk
     depends_on:
       - elasticsearch
     extra_hosts:
-      - "postgres:192.168.0.100"
+      - "postgres:192.168.1.3"
 
   kibana:
     build:

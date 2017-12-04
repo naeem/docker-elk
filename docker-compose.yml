@@ -3,6 +3,7 @@ version: '2'
 services:
 
   elasticsearch:
+    restart: always
     build:
       context: elasticsearch/
       args:
@@ -19,6 +20,7 @@ services:
       - elk
 
   logstash:
+    restart: always
     build:
       context: logstash/
       args:
@@ -40,6 +42,7 @@ services:
       - "postgres:192.168.1.3"
 
   kibana:
+    restart: always
     build:
       context: kibana/
       args:
@@ -54,6 +57,5 @@ services:
       - elasticsearch
 
 networks:
-
   elk:
     driver: bridge
